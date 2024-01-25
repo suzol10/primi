@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  php:
+    image: php:8.2-cli-composer
+    build:
+        context: .
+        dockerfile: Dockerfile
+    container_name: php
+    restart: unless-stopped
+    volumes:
+        - .:/var/www/html

@@ -4,27 +4,28 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "defa350bb393c67b61edbc8691dbbf43",
+    "content-hash": "667c249be53066e9c00095d62ebb4a58",
     "packages": [
         {
             "name": "smuuf/php-peg",
-            "version": "2.2",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/smuuf/php-peg.git",
-                "reference": "134e20af61b3dd5afef4eb61c193413926477960"
+                "reference": "dfb653ddfda6801adaee334d7fd0e0db0a13c7bd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/smuuf/php-peg/zipball/134e20af61b3dd5afef4eb61c193413926477960",
-                "reference": "134e20af61b3dd5afef4eb61c193413926477960",
+                "url": "https://api.github.com/repos/smuuf/php-peg/zipball/dfb653ddfda6801adaee334d7fd0e0db0a13c7bd",
+                "reference": "dfb653ddfda6801adaee334d7fd0e0db0a13c7bd",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.0"
+                "php": ">=7.4"
             },
             "require-dev": {
-                "phpunit/phpunit": "^6.5"
+                "nette/tester": "^2.4",
+                "phpstan/phpstan": "^1.5"
             },
             "bin": [
                 "bin/peg"
@@ -68,30 +69,33 @@
                 "parser",
                 "peg"
             ],
-            "time": "2020-03-27T21:40:40+00:00"
+            "support": {
+                "source": "https://github.com/smuuf/php-peg/tree/3.0.0"
+            },
+            "time": "2022-04-25T23:35:01+00:00"
         }
     ],
     "packages-dev": [
         {
             "name": "nette/tester",
-            "version": "v2.3.2",
+            "version": "v2.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/tester.git",
-                "reference": "793aa4bb87872319902a569ed84a64844fdc1549"
+                "reference": "328d7b64579cdbc82e0e01d92ea9c58b9cf0a327"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/tester/zipball/793aa4bb87872319902a569ed84a64844fdc1549",
-                "reference": "793aa4bb87872319902a569ed84a64844fdc1549",
+                "url": "https://api.github.com/repos/nette/tester/zipball/328d7b64579cdbc82e0e01d92ea9c58b9cf0a327",
+                "reference": "328d7b64579cdbc82e0e01d92ea9c58b9cf0a327",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1"
+                "php": ">=8.0 <8.4"
             },
             "require-dev": {
                 "ext-simplexml": "*",
-                "phpstan/phpstan": "^0.12"
+                "phpstan/phpstan": "^1.0"
             },
             "bin": [
                 "src/tester"
@@ -99,7 +103,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.4-dev"
+                    "dev-master": "2.5-dev"
                 }
             },
             "autoload": {
@@ -117,6 +121,10 @@
                 {
                     "name": "David Grudl",
                     "homepage": "https://davidgrudl.com"
+                },
+                {
+                    "name": "Miloslav Hůla",
+                    "homepage": "https://github.com/milo"
                 },
                 {
                     "name": "Nette Community",
@@ -137,35 +145,37 @@
                 "testing",
                 "unit"
             ],
-            "time": "2020-03-06T15:55:57+00:00"
+            "support": {
+                "issues": "https://github.com/nette/tester/issues",
+                "source": "https://github.com/nette/tester/tree/v2.5.2"
+            },
+            "time": "2024-01-08T11:41:26+00:00"
         },
         {
             "name": "phpstan/phpstan",
-            "version": "0.12.18",
+            "version": "1.10.57",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "1ce27fe29c8660a27926127d350d53d80c4d4286"
+                "reference": "1627b1d03446904aaa77593f370c5201d2ecc34e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/1ce27fe29c8660a27926127d350d53d80c4d4286",
-                "reference": "1ce27fe29c8660a27926127d350d53d80c4d4286",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/1627b1d03446904aaa77593f370c5201d2ecc34e",
+                "reference": "1627b1d03446904aaa77593f370c5201d2ecc34e",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.1"
+                "php": "^7.2|^8.0"
+            },
+            "conflict": {
+                "phpstan/phpstan-shim": "*"
             },
             "bin": [
                 "phpstan",
                 "phpstan.phar"
             ],
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.12-dev"
-                }
-            },
             "autoload": {
                 "files": [
                     "bootstrap.php"
@@ -176,7 +186,32 @@
                 "MIT"
             ],
             "description": "PHPStan - PHP Static Analysis Tool",
-            "time": "2020-03-22T16:51:47+00:00"
+            "keywords": [
+                "dev",
+                "static analysis"
+            ],
+            "support": {
+                "docs": "https://phpstan.org/user-guide/getting-started",
+                "forum": "https://github.com/phpstan/phpstan/discussions",
+                "issues": "https://github.com/phpstan/phpstan/issues",
+                "security": "https://github.com/phpstan/phpstan/security/policy",
+                "source": "https://github.com/phpstan/phpstan-src"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/ondrejmirtes",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/phpstan",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/phpstan/phpstan",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-01-24T11:51:34+00:00"
         },
         {
             "name": "smuuf/koloader",
@@ -184,17 +219,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/smuuf/koloader.git",
-                "reference": "5ecb46f65d751b00d18b7ca10f4be772349ece90"
+                "reference": "0cb5e90edc2a2157a82a1399e86fe532ab2a00b6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/smuuf/koloader/zipball/5ecb46f65d751b00d18b7ca10f4be772349ece90",
-                "reference": "5ecb46f65d751b00d18b7ca10f4be772349ece90",
+                "url": "https://api.github.com/repos/smuuf/koloader/zipball/0cb5e90edc2a2157a82a1399e86fe532ab2a00b6",
+                "reference": "0cb5e90edc2a2157a82a1399e86fe532ab2a00b6",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.5.0"
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "files": [
@@ -213,7 +249,11 @@
                 }
             ],
             "description": "A lightweight directory-sniffing autoloader with caching.",
-            "time": "2020-03-14T23:36:45+00:00"
+            "support": {
+                "issues": "https://github.com/smuuf/koloader/issues",
+                "source": "https://github.com/smuuf/koloader/tree/0.5"
+            },
+            "time": "2020-11-18T21:43:26+00:00"
         },
         {
             "name": "smuuf/phpcb",
@@ -221,23 +261,42 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/smuuf/phpcb.git",
-                "reference": "e32f599c868ba50d5434d33379820a40b739c039"
+                "reference": "ccfb13a7a060a122ba0d802e5e20b83ce02589ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/smuuf/phpcb/zipball/e32f599c868ba50d5434d33379820a40b739c039",
-                "reference": "e32f599c868ba50d5434d33379820a40b739c039",
+                "url": "https://api.github.com/repos/smuuf/phpcb/zipball/ccfb13a7a060a122ba0d802e5e20b83ce02589ad",
+                "reference": "ccfb13a7a060a122ba0d802e5e20b83ce02589ad",
                 "shasum": ""
             },
+            "require": {
+                "ext-bcmath": "*",
+                "php": ">=7.4"
+            },
+            "require-dev": {
+                "nette/tester": "^2.4",
+                "phpstan/phpstan": "^1.2"
+            },
+            "default-branch": true,
             "type": "library",
             "autoload": {
-                "files": [
-                    "app/loader.php"
-                ]
+                "psr-4": {
+                    "Smuuf\\Phpcb\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Premysl Karbula",
+                    "email": "premavansmuuf+github@gmail.com"
+                }
+            ],
             "description": "PHP Code Benchmark",
-            "time": "2017-10-05T22:41:27+00:00"
+            "support": {
+                "issues": "https://github.com/smuuf/phpcb/issues",
+                "source": "https://github.com/smuuf/phpcb/tree/0.5.2"
+            },
+            "time": "2021-12-21T15:18:09+00:00"
         }
     ],
     "aliases": [],
@@ -249,7 +308,8 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=7.1"
+        "php": "^8.2"
     },
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "2.6.0"
 }

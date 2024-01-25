@@ -152,9 +152,8 @@ class StringValue extends Value implements
 		} else {
 
 			// If index is specified, PHP own rules for inserting into strings apply.
-			$this->value[(int) $index] = $value->value;
-
-		}
+            $this->value = substr_replace($this->value, $value->value, (int) $index, 1);
+        }
 
 	}
 

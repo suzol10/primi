@@ -5,3 +5,4 @@ temp/**
 !temp/.gitkeep
 /tests/**/output/*.actual
 /tests/**/output/*.expected
+/.idea/**

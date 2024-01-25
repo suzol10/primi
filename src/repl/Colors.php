@@ -56,7 +56,7 @@ class Colors extends \Smuuf\Primi\StrictObject {
 
 		return preg_replace_callback(
 			'#(?<!\\\\)\{([a-z_-][a-z-]*)\}#i',
-			'self::handler',
+            self::handler(...),
 			$string . ($revert ? '{_}' : null) // Insert reset character if we should reset styles on end.
 		);
 

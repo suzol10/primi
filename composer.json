@@ -1,5 +1,5 @@
 {
-	"name": "smuuf/primi",
+	"name": "suzol10/primi",
 	"description": "A scripting language written in PHP & executable within PHP.",
 	"license": "MIT",
 	"type": "library",
@@ -17,13 +17,13 @@
 		 "classmap": ["src/"]
 	},
 	"require": {
-		"php": ">=7.1",
-		"smuuf/php-peg": "^2"
+		"php": "^8.2",
+		"smuuf/php-peg": "3.0"
 	},
 	"require-dev": {
 		"smuuf/koloader": "dev-master",
 		"smuuf/phpcb": "dev-master",
 		"nette/tester": "^2.0",
-		"phpstan/phpstan": "^0.12"
+		"phpstan/phpstan": "^1.10"
 	}
 }

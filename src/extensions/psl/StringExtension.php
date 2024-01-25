@@ -257,7 +257,7 @@ class StringExtension extends Extension {
 		ArrayValue $array
 	): StringValue {
 
-		$prepared = \array_map(function(&$item) use ($self) {
+		$prepared = \array_map(function($item) use ($self) {
 
 			// Common::allowTypes($item, StringValue::class, NumberValue::class,
 			// 	BoolValue::class, ArrayValue::class);
